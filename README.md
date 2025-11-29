@@ -1,3 +1,5 @@
-"# La prÇdiction du diabäte" 
-"" 
-"Projet du module IA (ENSAM) rÇalisÇ en Jupyter Notebook." 
+# La pr√©diction du diab√®te
+
+Projet du module IA (ENSAM) r√©alis√© en Jupyter Notebook.
+
+IA project: predicting diabetes from medical data (Jupyter Notebook).
