@@ -1,0 +1,317 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === APP CONTAINER === */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #020617, #0a0f1e);
+  color: #e5e7eb;
+  padding: 2rem 1rem;
+}
+
+/* === HEADER === */
+.app-header {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.app-description {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === MAIN LAYOUT === */
+.app-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .app-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* === CARD STYLES === */
+.card {
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #1e293b;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #1e293b;
+}
+
+/* === FORM STYLES === */
+.diabetes-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  letter-spacing: 0.025em;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input:hover,
+.form-select:hover {
+  border-color: #475569;
+}
+
+/* === BUTTON STYLES === */
+.btn-primary {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  margin-top: 0.5rem;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* === ERROR MESSAGE === */
+.error-message {
+  padding: 0.75rem 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #fca5a5;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message::before {
+  content: "⚠️";
+}
+
+/* === RESULT STYLES === */
+.result-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #64748b;
+  text-align: center;
+}
+
+.result-empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.result-empty-text {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-empty-subtext {
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.result-header {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #1e293b;
+}
+
+.result-model {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.result-prediction {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.result-prediction.diabetic {
+  color: #f87171;
+}
+
+.result-prediction.non-diabetic {
+  color: #34d399;
+}
+
+.result-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.result-item {
+  background: #1e293b;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border-left: 4px solid #3b82f6;
+}
+
+.result-item-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.result-item-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.result-risk {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.result-risk-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.result-risk-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #93c5fd;
+}
+
+.result-disclaimer {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.2);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #fde047;
+  line-height: 1.5;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1023px) {
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .result-empty {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .app-title {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
