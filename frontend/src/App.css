@@ -283,6 +283,160 @@ body {
   line-height: 1.5;
 }
 
+/* === TABS STYLES === */
+.tabs-container {
+  max-width: 1400px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  color: #cbd5e1;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.tab-button:hover {
+  background: #334155;
+  border-color: #475569;
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* === FILE UPLOAD STYLES === */
+.form-input-file {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-input-file:hover {
+  border-color: #475569;
+}
+
+.form-input-file:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.card-description {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* === IMAGE PREVIEW === */
+.image-preview-container {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #1e293b;
+  border-radius: 10px;
+  border: 1px solid #334155;
+}
+
+.preview-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.image-preview {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  display: block;
+  margin: 0 auto;
+}
+
+/* === RETINOPATHY FORM === */
+.retinopathy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* === RETINOPATHY RESULT STYLES === */
+.result-classes {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #1e293b;
+  border-radius: 10px;
+  border: 1px solid #334155;
+}
+
+.result-classes-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.result-classes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.result-class-badge {
+  padding: 0.5rem 1rem;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.result-class-badge.active {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+/* === SEVERITY COLORS === */
+.result-prediction.severity-none {
+  color: #34d399;
+}
+
+.result-prediction.severity-mild {
+  color: #fbbf24;
+}
+
+.result-prediction.severity-moderate {
+  color: #f97316;
+}
+
+.result-prediction.severity-severe {
+  color: #ef4444;
+}
+
+.result-prediction.severity-proliferative {
+  color: #dc2626;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 1023px) {
   .app-title {
@@ -295,6 +449,15 @@ body {
 
   .result-empty {
     min-height: 300px;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab-button {
+    width: 100%;
   }
 }
 

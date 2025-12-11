@@ -29,3 +29,20 @@ export async function predictDiabetes(formData) {
 
   return response.data;
 }
+
+export async function predictRetinopathy(imageFile) {
+  const formData = new FormData();
+  formData.append("file", imageFile);
+
+  const response = await axios.post(
+    `${API_BASE_URL}/predict-retinopathy`,
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    }
+  );
+
+  return response.data;
+}
